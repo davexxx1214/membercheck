@@ -73,7 +73,7 @@ class membercheck(Plugin):
                         logger.info(f"当前用户id: {user_id} \n当前credit: {self.params_cache[user_id]['credit']}")
                     e_context.action = EventAction.CONTINUE  # 事件继续，交付给下个插件或默认逻辑
                 else:
-                    error_tip = f"尊敬的用户，您好！我是AI小助理微米精灵，您的免费体验次数已达到上限，如果您对我的服务满意的话，可以开通如下服务：\n1️⃣加好友：不限次数的AI专属服务。\n2️⃣开群聊：让AI助理为你的群做推广。\n3️⃣定制化：创建定制自己品牌的AI助理。\n欢迎联系微米客服开通服务"
+                    error_tip = f"尊敬的用户，您好！我是AI小助理微米精灵，您的免费体验次数已达到上限，如果您对我的服务满意的话，可以开通如下服务：\n1️⃣加好友：不限次数的AI专属服务。\n2️⃣开群聊：让AI助理为你的群做推广。\n3️⃣定制化：创建定制自己品牌的AI助理。\n欢迎联系微米客服开通服务。"
                     reply = Reply(type=ReplyType.TEXT, content= error_tip)
                     e_context["reply"] = reply
                     e_context.action = EventAction.BREAK_PASS
