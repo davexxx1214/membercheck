@@ -73,7 +73,11 @@ class membercheck(Plugin):
                         logger.info(f"当前用户id: {user_id} \n当前credit: {self.params_cache[user_id]['credit']}")
                     e_context.action = EventAction.CONTINUE  # 事件继续，交付给下个插件或默认逻辑
                 else:
-                    error_tip = f"尊敬的用户，您当前的试用次数已达上限。为了不中断您的体验，您可以选择成为会员享受无限制的服务。或者您也可以稍后再试。感谢您的理解与支持！"
+                    error_tip = f"尊敬的用户，您好!我是AI小助理微米精灵，您的免费体验次数已达到上限，如果您对我的服务满意的话，可以开通如下服务：
+                                    1️⃣加好友：不限次数的AI专属服务。
+                                    2️⃣开群聊：让AI助理为你的群做推广。
+                                    3️⃣定制化：创建定制自己品牌的AI助理。
+                                    欢迎联系微米客服开通服务"
                     reply = Reply(type=ReplyType.TEXT, content= error_tip)
                     e_context["reply"] = reply
                     e_context.action = EventAction.BREAK_PASS
