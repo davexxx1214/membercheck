@@ -42,7 +42,7 @@ class membercheck(Plugin):
             self.db_user = self.config.get("db_user","")
             self.db_password = self.config.get("db_password","")
             self.db_name = self.config.get("db_name", "")
-            self.custom_suno_prefix = self.config.get("credit_prefix", "余额")
+            self.credit_prefix = self.config.get("credit_prefix", "余额")
 
             self.params_cache = ExpiredDict(500)
             # 初始化成功日志
